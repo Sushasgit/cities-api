@@ -1,7 +1,6 @@
 const City = require("../../models/city");
 
 module.exports = function (router) {
-  // GET: List of Team Members
   router.get("/cities", function (req, res) {
     City.find()
       .sort({ city: 1 })

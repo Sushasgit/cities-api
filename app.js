@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const api = require("./api");
-const morgan = require("morgan"); // logger
+const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -25,7 +25,6 @@ app.use(function (req, res) {
 
 //  MongoDB connection
 const mongoose = require("mongoose");
-// mongoose.connect('mongodb://localhost:27017/virtualstandups', { useNewUrlParser: true })
 mongoose.connect(
   "mongodb+srv://susha:6903820@cluster0-ejftq.mongodb.net/test?retryWrites=true&w=majority",
   { useNewUrlParser: true, dbName: "cities_api" }
